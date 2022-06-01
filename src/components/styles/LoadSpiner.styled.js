@@ -10,10 +10,10 @@ const spin = keyframes`
 `;
 
 export const LoadSpiner = styled.span`
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: black;
   animation: ${({ loadIndicator }) =>
     loadIndicator &&
     css`

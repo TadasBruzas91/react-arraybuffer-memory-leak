@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "./styles/Button.styled";
 import { LoadSpiner } from "./styles/LoadSpiner.styled";
 import { MobileMenu } from "./styles/MobileMenu";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 let firstLoad = true;
 
@@ -36,7 +37,9 @@ export default function Header() {
     <div>
       <Button onClick={handleMenuToggle}>Menu</Button>
       <Button onClick={startLongTask}>Start Long task</Button>
-      <LoadSpiner loadIndicator={loading} />
+      <LoadSpiner loadIndicator={loading}>
+        <AiOutlineLoading3Quarters size={50} />
+      </LoadSpiner>
       <MobileMenu menuOpen={menuToggler} firstLoad={firstLoad}>
         <li>Projects</li>
         <li>Contact</li>
